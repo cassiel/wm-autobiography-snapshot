@@ -1,0 +1,95 @@
+/* some style */
+svg#app {
+  width: 720px;
+  height: 720px; }
+
+div.svg-host {
+  width: 720px;
+  margin: auto; }
+
+div.controls-host {
+  position: relative;
+  top: -500px; }
+
+div.controls-host div {
+  margin: auto; }
+
+div.this-host, div.next-host {
+  width: 200px; }
+
+div.legend-host {
+  width: 300px;
+  text-align: center; }
+
+div.legend-host span {
+  font-family: "Optima", sans-serif;
+  letter-spacing: 0.5em;
+  background-color: white;
+  border: 0;
+  font-size: 3em;
+  margin-bottom: 15px; }
+
+div.this-host button {
+  font-family: "Optima", sans-serif;
+  background-color: white;
+  border: 0;
+  color: #E0E0E0;
+  font-size: 5em;
+  margin-bottom: 15px; }
+
+div.next-host button {
+  font-family: "Optima", sans-serif;
+  background-color: #F0F0F0;
+  border: 1px solid #D0D0D0;
+  font-size: 1.25em;
+  color: black;
+  margin-bottom: 5px; }
+
+div.next-host button:hover {
+  background-color: #D0D0D0; }
+
+div.next-host input {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 5px;
+  color: #808080;
+  font-family: "Optima", sans-serif;
+  font-size: 1.25em; }
+
+button {
+  padding: 2px 3px;
+  text-align: center;
+  /*text-decoration: none;*/
+  display: inline-block;
+  width: 100%; }
+
+button:focus {
+  outline: 0; }
+
+g.node text, button {
+  font-family: "Optima", sans-serif;
+  font-size: 3.5em; }
+
+text.label {
+  font-size: 1.2em;
+  font-weight: bold; }
+
+table.listing tbody tr td.mono {
+  font-family: monospace; }
+table.listing tbody tr td.id {
+  text-align: right;
+  font-weight: bold; }
+
+span.iconised {
+  display: inline-block;
+  background-color: #E0E0E0;
+  border: 1px solid #808080;
+  border-radius: 0.3em;
+  text-align: center;
+  padding-top: 0em;
+  padding-bottom: 0;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  width: 1.8em; }
+
+/*# sourceMappingURL=style.css.map */

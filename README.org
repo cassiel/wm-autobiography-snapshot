@@ -1,0 +1,47 @@
+-*- mode: org; mode: visual-line; -*-
+#+STARTUP: indent
+
+* wm-autobiography
+** Server
+
+(Notes here adapted from [[https://github.com/cassiel/websocket-midi-server][websocket-midi-server]].)
+
+Flask server. Create and activate a virtual environment:
+
+#+BEGIN_SRC shell-script
+  virtualenv -p python3 ~/Desktop/venv3
+  . ~/Desktop/venv3/bin/activate
+#+END_SRC
+
+Install packages:
+
+#+BEGIN_SRC shell-script
+  pip install flask
+  pip install pymongo
+#+END_SRC
+
+Build Flask server in ~server-23/main.py~. Turn ~LOCAL~ off for deployment. Deployment is specified via the ~Procfile~, once we've generated the requirements:
+
+#+BEGIN_SRC shell-script
+  pip freeze > requirements.txt
+#+END_SRC
+
+But we're using ~gunicorn~, so need that as well. And Heroku claims a need for ~eventlet~.
+
+#+BEGIN_SRC shell-script
+  pip install gunicorn
+  pip install eventlet
+#+END_SRC
+
+NOTE: changes for deployment to the real world: the callback URL for the JSON data (currently in ~ajax-xfer~), and the ~LOCAL~ flag in ~main.py~.
+
+Also: I think the ~push heroku~ only works from the ~master~ branch.
+
+Push to Heroku:
+
+#+BEGIN_SRC shell-script
+  heroku login
+  heroku create autobiography-23
+  heroku git:remote -a autobiography-23 # Not sure why this isn't happening on 'create'.
+  git push heroku master
+#+END_SRC

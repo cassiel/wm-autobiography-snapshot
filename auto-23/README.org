@@ -1,0 +1,6 @@
+-*- mode: org; mode: visual-line; -*-
+#+STARTUP: indent
+
+* BUGS [0/1]
+
+- [ ] Not very forgiving of non-integer typed input to "next" field
